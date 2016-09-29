@@ -1,4 +1,6 @@
-# HelloNetwork
+# StartNetwork
+
+Copied from nerves_examples / hello_network example
 
 Configures the primary network interface using [DHCP] and announces itself
 on the network using [SSDP].
