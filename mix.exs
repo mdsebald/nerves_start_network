@@ -4,7 +4,7 @@ defmodule StartNetwork.Mixfile do
   @target System.get_env("NERVES_TARGET") || "rpi3"
 
   def project do
-    [app: :start_network,
+    [app: :nerves_start_network,
      version: "0.1.0",
      elixir: "~> 1.3",
      archives: [nerves_bootstrap: "~> 0.1.3"],
