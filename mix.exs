@@ -1,4 +1,4 @@
-defmodule StartNetwork.Mixfile do
+defmodule NervesStartNetwork.Mixfile do
   use Mix.Project
 
   @target System.get_env("NERVES_TARGET") || "rpi3"
