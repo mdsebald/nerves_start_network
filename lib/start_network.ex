@@ -9,6 +9,14 @@ defmodule StartNetwork do
   def start(_type, _args) do
     unless :os.type == {:unix, :darwin} do     # don't start networking unless we're on nerves
       {:ok, _} = Networking.setup @interface
+      
+      # Example static IP address setup.
+      # Needed so we can make a static /etc/hosts file
+      # So Erlang nodes can communicate
+      #
+      # {:ok, _} = Networking.setup :eth0, mode: "static", ip: "10.0.0.5", router:
+      #     "10.0.0.1", mask: "16", subnet: "255.255.0.0", mode: "static",
+      #      dns: "8.8.8.8 8.8.4.4", hostname: "myhost"
     end
     #publish_node_via_ssdp(@interface)
     {:ok, self}
