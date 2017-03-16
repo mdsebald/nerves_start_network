@@ -6,8 +6,8 @@ defmodule NervesStartNetwork.Mixfile do
   def project do
     [app: :nerves_start_network,
      version: "0.1.0",
-     elixir: "~> 1.3",
-     archives: [nerves_bootstrap: "~> 0.1.3"],
+     elixir: "~> 1.4.0",
+     archives: [nerves_bootstrap: "~> 0.3.0"],
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      target: @target,
@@ -26,15 +26,15 @@ defmodule NervesStartNetwork.Mixfile do
   end
 
   defp deps do
-    [{:nerves, "~> 0.3.0"},
+    [{:nerves, "~> 0.5.0"},
      {:nerves_lib, github: "nerves-project/nerves_lib"},
-     {:nerves_networking, github: "nerves-project/nerves_networking", tag: "v0.6.0"},
+     {:nerves_networking, github: "nerves-project/nerves_networking"},
      {:nerves_ssdp_server, github: "nerves-project/nerves_ssdp_server"}]
   end
 
   def system(target) do
     [
-     {:"nerves_system_#{target}", "~> 0.6"}
+     {:"nerves_system_#{target}", "~> 0.11.0"}
     ]
   end
 
