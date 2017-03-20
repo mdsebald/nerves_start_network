@@ -64,7 +64,7 @@ defmodule NervesStartNetwork.Mixfile do
   # Specify target specific dependencies
   def deps("host"), do: []
   def deps(target) do
-    [{:nerves_runtime, "~> 0.1.0"},
+    [
      {:"nerves_system_#{target}", "~> 0.11.0"},
      {:nerves_lib, github: "nerves-project/nerves_lib"},
      {:nerves_networking, github: "nerves-project/nerves_networking"},
